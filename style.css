@@ -1,0 +1,11 @@
+.tutorialjs-img {
+    max-width: 512px;
+}
+
+.tutorialjs-gap {
+    gap: 50px;
+}
+
+#home, #demo {
+    padding: 50px;
+}

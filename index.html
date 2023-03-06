@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial.js - an easy way to provide user friendly web apps</title>
+    <link rel="stylesheet" href="bootstrap-4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="text-white bg-dark">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <a class="navbar-brand" href="#">Tutorial.js</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#demo">Demo</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="d-flex justify-content-center align-items-center tutorialjs-gap">
+        <div id="home-img">
+            <img src="https://raw.githubusercontent.com/lennygir/tutorial.js/main/assets/demo/example.png" class="tutorialjs-img" alt="demo of tutorial.js">
+        </div>
+        <div id="home-text">
+            <h1 class="text-center">Tutorial.js</h1>
+            <h3 class="text-center">Helps you to create user-friendly web apps</h3>
+            <p class="text-center">Create and manage easily tutorials to show how to use your web application</p>
+        </div>
+    </section>
+
+    <section id="demo" class="d-flex flex-column justify-content-center align-items-center">
+        <h3>Demo</h3>
+        <a href="#" id="start-tutorial" class="btn btn-primary">Start tutorial</a>
+    </section>
+
+    <footer>
+        <p class="d-flex flex-column justify-content-center align-items-center">
+            <a href="https://github.com/lennygir/tutorial.js" class="text-align text-white">View on github</a>
+        </p>
+    </footer>
+
+    <script src="bootstrap-4.0.0/js/bootstrap.min.js"></script>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
