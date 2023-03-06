@@ -10,16 +10,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="text-white bg-dark">
+<body class="text-dark bg-light">
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarToggler">
             <a class="navbar-brand" href="#">Tutorial.js</a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#install">Installation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#documentation">Documentation</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#demo">Demo</a>
@@ -28,25 +35,184 @@
         </div>
     </nav>
 
-    <section id="home" class="d-flex justify-content-center align-items-center tutorialjs-gap">
+    <section id="home" class="d-flex justify-content-center align-items-center tutorialjs-gap flex-wrap">
         <div id="home-img">
-            <img src="https://raw.githubusercontent.com/lennygir/tutorial.js/main/assets/demo/example.png" class="tutorialjs-img" alt="demo of tutorial.js">
+            <img src="https://raw.githubusercontent.com/lennygir/tutorial.js/main/assets/demo/illustration_service.svg"
+                class="tutorialjs-img" alt="demo of tutorial.js">
         </div>
-        <div id="home-text">
+        <div>
             <h1 class="text-center">Tutorial.js</h1>
             <h3 class="text-center">Helps you to create user-friendly web apps</h3>
             <p class="text-center">Create and manage easily tutorials to show how to use your web application</p>
         </div>
     </section>
 
+    <section id="install" class="d-flex justify-content-center align-items-center tutorialjs-gap flex-wrap">
+        <div id="first-install-card" class="card bg-dark text-white" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Installation</h5>
+                <p class="card-text">Download the latest version of tutorial.js in the repository (dist folder)</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <a target="_blank" href="https://github.com/tutorial-js/tutorial.js/tree/main/dist"
+                        class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        <div id="second-install-card" class="card bg-dark text-white" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Import it on your project</h5>
+                <p class="card-text">Import the index.js within your javascript files</p>
+            </div>
+        </div>
+        <div id="third-install-card" class="card bg-dark text-white" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Implement your tutorial</h5>
+                <p class="card-text">Build your own tutorial and guide your users into a new experience.</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <a href="#documentation" class="btn btn-primary">Documentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="documentation">
+        <h3>Documentation</h3>
+        <div>
+            <h4>Constructor</h4>
+            <div class="tutorialjs-subdoc">
+                <code>constructor(Step[], Options)</code>
+                <div>
+                    <h5>Step</h5>
+                    <div class="tutorialjs-subdoc d-flex align-items-center justify-content-center">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 50%">Attribute (? if can be null)</th>
+                                    <th scope="col" style="width: 25%">Type</th>
+                                    <th scope="col" style="width: 25%">Default value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">element</th>
+                                    <td>string | HTMLElement</td>
+                                    <td>null</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">comment</th>
+                                    <td>string</td>
+                                    <td>null</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">option?</th>
+                                    <td>StepOptions</td>
+                                    <td>{}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h5>StepOptions</h5>
+                    <div class="tutorialjs-subdoc d-flex align-items-center justify-content-center">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 50%">Attribute (? if can be null)</th>
+                                    <th scope="col" style="width: 25%">Type</th>
+                                    <th scope="col" style="width: 25%">Default value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">position?</th>
+                                    <td>'top' | 'left' | 'right' | 'bottom'</td>
+                                    <td>bottom</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">fontsize?</th>
+                                    <td>string</td>
+                                    <td>15px</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">fontweight?</th>
+                                    <td>string</td>
+                                    <td>normal</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">gap?</th>
+                                    <td>number</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h5>Options</h5>
+                    <div class="tutorialjs-subdoc d-flex align-items-center justify-content-center">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 50%">Attribute (? if can be null)</th>
+                                    <th scope="col" style="width: 25%">Type</th>
+                                    <th scope="col" style="width: 25%">Default value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">backgroundColor?</th>
+                                    <td>string</td>
+                                    <td>#000000</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">textColor?</th>
+                                    <td>string</td>
+                                    <td>#FFFFFF</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">backgroundOpacity?</th>
+                                    <td>number</td>
+                                    <td>0.5</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">textOpacity?</th>
+                                    <td>number</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">nextButtonLabel?</th>
+                                    <td>string</td>
+                                    <td>Next</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">previousButtonLabel?</th>
+                                    <td>string</td>
+                                    <td>Previous</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4>Methods</h4>
+            <div class="tutorialjs-subdoc">
+                <code>start()</code>
+                <p>Runs the tutorial</p>
+            </div>
+        </div>
+    </section>
+
     <section id="demo" class="d-flex flex-column justify-content-center align-items-center">
-        <h3>Demo</h3>
+        <h3>Demonstration</h3>
         <a href="#" id="start-tutorial" class="btn btn-primary">Start tutorial</a>
     </section>
 
-    <footer>
+    <footer class="bg-dark text-white">
         <p class="d-flex flex-column justify-content-center align-items-center">
-            <a href="https://github.com/lennygir/tutorial.js" class="text-align text-white">View on github</a>
+            <a target="_blank" href="https://github.com/lennygir/tutorial.js" class="text-align text-white">View on github</a>
         </p>
     </footer>
 

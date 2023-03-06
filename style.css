@@ -6,6 +6,22 @@
     gap: 50px;
 }
 
-#home, #demo {
+.tutorialjs-subdoc {
+    padding-left: 25px;
+}
+
+#home, #install, #demo, #documentation, footer {
     padding: 50px;
+}
+
+footer {
+    margin: 0px;
+}
+
+#documentation table {
+    max-width: 1000px;
+}
+
+* {
+    scroll-behavior: smooth;
 }
